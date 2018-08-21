@@ -32,7 +32,7 @@ mongoose.connect(keys.mongoURI)
 require('./routes/authRoutes')(app);
 
 app.get('/', function (req, res) {
-    res.send('Hello World!')
+    res.send(`Hello World!${req.user}`)
 })
 
 const PORT = process.env.PORT || 5000;
