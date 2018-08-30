@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import logo from '../logo.png'
 
@@ -20,7 +21,7 @@ class Header extends React.Component {
     return (
       <nav>
         <div className="nav-wrapper">
-          <a href="#" className="brand-logo" style={{"height": "100%"}}><img src={logo} style={{"height": "100%"}}/></a>
+          <Link to={this.props.auth ? "/surveys" : "/"} className="brand-logo" style={{"height": "100%"}}><img src={logo} style={{"height": "100%"}}/></Link>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             {this.renderContent()}
           </ul>
