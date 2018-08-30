@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import logo from '../logo.png'
+import Payments from './Payments';
 
 class Header extends React.Component {
   constructor(props) {
@@ -14,7 +15,12 @@ class Header extends React.Component {
       case false: 
         return <li><a href="/auth/google">Login with Google</a></li>
       default: 
-        return <li><a href="/api/logout">Logout</a></li>
+        return (
+          <React.Fragment>
+            <li><Payments/></li>
+            <li><a href="/api/logout">Logout</a></li>
+          </React.Fragment>
+        );
     }
   }
   render() {
@@ -27,7 +33,6 @@ class Header extends React.Component {
           </ul>
         </div>
       </nav>
-          
     );
   }
 }
