@@ -23,12 +23,15 @@ passport.use(new GoogleStrategy({
 }, async (accessToken, refreshToken, profile, done) => {
         const existingUser = await User.findOne({ googleId: profile.id })   
         if(existingUser) {
-            console.log("Hello", profile.displayName)
+            console.log("Hello", profile)
             done(null, existingUser);
         }
         else { 
             console.log('create a user')               
-            const user = await new User({ googleId: profile.id }).save()
+            const user = await new User({ 
+                googleId: profile.id,
+                profilePicture: profile.photos[0].value
+            }).save()
             done(null, user);
         }
     }

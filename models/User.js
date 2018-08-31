@@ -3,6 +3,7 @@ const { Schema } = mongoose;
 
 const userSchema = new Schema({
     googleId: String,
+    profilePicture: String,
     credits: {
         type: Number,
         default: 0
