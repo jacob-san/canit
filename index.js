@@ -34,10 +34,6 @@ mongoose.connect(keys.mongoURI)
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
 
-app.get('/', function (req, res) {
-    res.send(`Hello World!${req.user}`);
-})
-
 if(process.env.NODE_ENV === 'production') {
     // Express will serve up production assets like main.js
     app.use(express.static('client/build'));
