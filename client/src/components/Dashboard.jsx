@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 function Dashboard() {
   return (
     <div>
-      <div class="fixed-action-btn">
-        <Link class="btn-floating btn-large red" to="/surveys/new">
-          <i class="large material-icons">add</i>
+      <div className="fixed-action-btn">
+        <Link className="btn-floating btn-large red" to="/surveys/new">
+          <i className="large material-icons">add</i>
         </Link>
       </div>
     </div>

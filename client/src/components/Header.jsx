@@ -19,7 +19,7 @@ class Header extends React.Component {
           <React.Fragment>
             <li><Payments/></li>
             <li style={{ "margin": '0 10px' }}>{`Credits: ${this.props.auth.credits}`}</li>
-            <li><img src={this.props.auth.profilePicture} alt="" style={{ "border-radius": '50%'}}/></li>
+            <li><img src={this.props.auth.profilePicture} alt="" style={{ "borderRadius": '50%'}}/></li>
             <li><a href="/api/logout">Logout</a></li>
           </React.Fragment>
         );
