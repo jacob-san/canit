@@ -1,9 +1,12 @@
-import { FETCH_USER } from '../actions/types';
-export default function(state = null, action) {
-    switch(action.type) {
-        case FETCH_USER: 
-            return action.payload || false;
-        default: 
-            return state;
-    }
+import { SET_AUTH } from '../actions/types';
+const initialState = {
+  isLoggedIn: false
+};
+export default function(state = initialState, action) {
+  switch (action.type) {
+    case SET_AUTH:
+      return { ...state, isLoggedIn: action.payload };
+    default:
+      return state;
+  }
 }

@@ -95,7 +95,7 @@ class RegistrationForm extends Component {
           <Col span={12}>
             <Form.Item>
               {getFieldDecorator('dob', {
-                initialValue: moment(dob),
+                initialValue: dob && moment(dob),
 
                 rules: [
                   {

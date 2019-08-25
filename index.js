@@ -24,7 +24,7 @@ mongoose
   });
 
 require('./routes/candidateRoutes')(app);
-// require('./routes/loginRoutes')(app);
+require('./routes/loginRoutes')(app);
 
 if (process.env.NODE_ENV === 'production') {
   // Express will serve up production assets like main.js

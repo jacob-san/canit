@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import * as actions from '../actions';
 import { Table, Button, Icon, Modal, message } from 'antd';
 import axios from 'axios';
 import config from '../utils/config';
 import CandidateForm from './candidates/CandidateForm';
+import withAnalytics from './analytics/withAnalytics';
+import requireLogin from './login/requireLogin';
 
-class Dashboard extends React.Component {
+class Dashboard extends Component {
   state = {
     data: [],
     edit: {
@@ -107,6 +112,10 @@ class Dashboard extends React.Component {
       `${config.API_URL}/api/candidates/${record._id}`
     );
     if (res.status === 200) {
+      this.props.logEvent({
+        category: 'Candidate',
+        action: 'Delete'
+      });
       message.success('Deleted Successfully');
       this.fetchCandidates();
     }
@@ -127,6 +136,12 @@ class Dashboard extends React.Component {
     const payload = { ...data, id };
     const res = await axios.put(`${config.API_URL}/api/candidates`, payload);
     if (res.status === 200) {
+      this.props.logEvent({
+        category: 'Candidate',
+        action: 'Update',
+        label: 'Updated candidate details',
+        value: res.data._id
+      });
       message.success('Updated Successfully');
       this.fetchCandidates();
       this.onCancel();
@@ -138,7 +153,12 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div class="pg-dashboard-container">
-        <h2 className="table-title">CANDIDATES</h2>
+        <div className="table-title">
+          <h2 className="">CANDIDATES</h2>
+          <Link className="btn-link" to="/">
+            <Button type="primary">BACK</Button>
+          </Link>
+        </div>
         <Table
           className="table"
           columns={this.columns}
@@ -162,4 +182,11 @@ class Dashboard extends React.Component {
   }
 }
 
-export default Dashboard;
+const mapStateToProps = ({ auth }) => ({
+  isLoggedIn: auth.isLoggedIn
+});
+
+export default connect(
+  mapStateToProps,
+  actions
+)(requireLogin(withAnalytics(Dashboard)));

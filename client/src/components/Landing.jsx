@@ -1,6 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import { Row, Col, Typography, Card, message } from 'antd';
+import { Link } from 'react-router-dom';
+import { Row, Col, Card, message } from 'antd';
+import withAnalytics from './analytics/withAnalytics';
+import CandidateForm from '../components/candidates/CandidateForm';
+import config from '../utils/config';
 import cv from '../assets/undraw_online_cv_qy9w.svg';
 import logo from '../assets/logo-light.png';
 import curve from '../assets/curve2.svg';
@@ -30,11 +34,6 @@ import instagram from '../assets/iconmonstr-instagram-11.svg';
 import linkedin from '../assets/iconmonstr-linkedin-1.svg';
 import twitter from '../assets/iconmonstr-twitter-1.svg';
 
-import CandidateForm from '../components/candidates/CandidateForm';
-import config from '../utils/config';
-
-const { Title } = Typography;
-
 class Landing extends React.Component {
   constructor(props) {
     super(props);
@@ -44,6 +43,12 @@ class Landing extends React.Component {
     const res = await axios.post(`${config.API_URL}/api/candidates`, data);
     console.log(res);
     if (res.status === 200) {
+      this.props.logEvent({
+        category: 'Candidate',
+        action: 'Create',
+        label: 'Created a candidate',
+        value: res.data._id
+      });
       message.success('Submitted Successfully');
       return true;
     }
@@ -53,6 +58,9 @@ class Landing extends React.Component {
   render() {
     return (
       <div class="pg-container-landing">
+        <Link className="btn-link-ghost" to="/dashboard">
+          Dashboard
+        </Link>
         <div className="bg">
           <Row>
             <Col className="" sm={24} md={24} lg={12}>
@@ -254,4 +262,4 @@ class Landing extends React.Component {
   }
 }
 
-export default Landing;
+export default withAnalytics(Landing);

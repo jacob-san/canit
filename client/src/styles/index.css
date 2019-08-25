@@ -25,6 +25,20 @@ body {
   height: 90vh;
 }
 
+.btn-link-ghost {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: lightgray;
+  z-index: 1;
+}
+
+.btn-link-ghost:hover {
+  color: #d2345b;
+  scale: 1.5;
+  transition: all 0.2s;
+}
+
 .vector-container {
   position: relative;
 }
@@ -238,6 +252,10 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   padding-top: 50px;
+}
+
+.btn-link {
+  float: right;
 }
 
 .table {
