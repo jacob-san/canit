@@ -42,10 +42,10 @@ npm run dev
 
 # Libraries
 
-React
-Ant Design
-Redux
-Redux-Thunk
-ExpressJS
-Mongoose ODM,
-MongoDB
+> React
+> Ant Design
+> Redux
+> Redux-Thunk
+> ExpressJS
+> Mongoose ODM
+> React-GA
