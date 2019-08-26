@@ -49,3 +49,40 @@ npm run dev
 > ExpressJS, 
 > Mongoose ODM, 
 > React-GA
+
+
+# Google Analytics
+Google Analytics Page views and event tracking is managed by the Higher Order Component `withAnalytics`. It Uses `react-ga` for Google Analytics.
+
+```javascript
+export default function withAnalytics(WrappedComponent) {
+  return class extends React.Component {
+    componentDidMount() {
+      this.logPageView();
+    }
+
+    logPageView = () => {
+      console.log('log Analytics');
+      ReactGA.pageview(window.location.pathname);
+    };
+
+    logEvent = ({ category, action }) => {
+      ReactGA.event({
+        category,
+        action
+      });
+    };
+
+    render() {
+      // Wraps the input component in a container, without mutating it. Good!
+      return (
+        <WrappedComponent
+          logPageView={this.logPageView}
+          logEvent={this.logEvent}
+          {...this.props}
+        />
+      );
+    }
+  };
+}
+```
