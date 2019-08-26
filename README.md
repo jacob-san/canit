@@ -32,3 +32,19 @@ npm install
 ```
 npm run dev
 ```
+
+# How application works
+
+Both server/client are run using single npm script using concurrently.
+```
+npm run dev
+```
+
+# Libraries
+
+React
+Ant Design
+Redux
+Redux-Thunk
+ExpressJS
+Mongoose ODM
