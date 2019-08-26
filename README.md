@@ -55,6 +55,11 @@ npm run dev
 Google Analytics Page views and event tracking is managed by the Higher Order Component `withAnalytics`. It Uses `react-ga` for Google Analytics.
 
 ```javascript
+import React from 'react';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-146426298-1');
+
 export default function withAnalytics(WrappedComponent) {
   return class extends React.Component {
     componentDidMount() {
