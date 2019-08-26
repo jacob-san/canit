@@ -91,3 +91,17 @@ export default function withAnalytics(WrappedComponent) {
   };
 }
 ```
+
+## Redux Thunk
+Redux Thunk is used for async actions
+
+```javascript
+export const login = ({ userName, password }) => async dispatch => {
+  const res = await axios.post(`${process.env.API_URL}/api/login`, {
+    userName,
+    password
+  });
+  dispatch({ type: SET_AUTH, payload: res.data });
+  return res.data;
+};
+```
