@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import { Form, Icon, Input, Button, Checkbox, message } from 'antd';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import './login.css';
@@ -13,9 +13,10 @@ class NormalLoginForm extends React.Component {
         console.log('Received values of form: ', values);
         const { username, password } = values;
         const login = await this.props.login({ userName: username, password });
-        // if (login) {
-        //   this.props.history.push('/dashboard');
-        // }
+        if (!login) {
+          // this.props.history.push('/dashboard');
+          message.error('Incorrect Username/Password');
+        }
       }
     });
   };
