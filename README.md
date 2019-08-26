@@ -47,4 +47,5 @@ Ant Design
 Redux
 Redux-Thunk
 ExpressJS
-Mongoose ODM
+Mongoose ODM,
+MongoDB
