@@ -28,6 +28,7 @@ class NormalLoginForm extends React.Component {
         <div className="login-title">
           <h1>Welcome Back !</h1>
         </div>
+        <p class="pwd-hint">Login using `admin` as usr & pwd</p>
         <Form onSubmit={this.handleSubmit} className="login-form">
           <Form.Item>
             {getFieldDecorator('username', {

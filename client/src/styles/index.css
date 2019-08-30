@@ -22,7 +22,7 @@ body {
 /* Landing */
 
 .pg-container-landing .bg {
-  height: 90vh;
+  /* height: 90vh; */
 }
 
 .btn-link-ghost {
@@ -46,8 +46,8 @@ body {
 .curve {
   position: absolute;
   left: -15px;
-  object-fit: cover;
-  width: 812px;
+  display: block;
+  width: 100%;
   height: auto;
 }
 
@@ -171,7 +171,7 @@ body {
 
 .margin-container {
   max-width: 80%;
-  margin: 0 auto;
+  margin: 100px auto 0;
   text-align: center;
 }
 
@@ -184,6 +184,7 @@ body {
   height: 200px;
   margin-top: 80px;
   color: #000000;
+  max-width: 300px;
 }
 
 .card img {
@@ -307,8 +308,64 @@ body {
   font-size: 10px;
 }
 
-@media (max-width: 992px) {
-  .form-container {
+.pwd-hint {
+  font-size: 9px;
+  color: #e8e8e8;
+  cursor: pointer;
+}
+
+.pwd-hint:hover {
+  color: gray;
+  scale: 1.4;
+  transition: all ease 0.5s;
+}
+
+@media (max-width: 768px) {
+  .landing-form {
     margin-top: 250px;
+  }
+  .card {
+    max-width: 200px;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-vector {
+    height: 250px;
+  }
+
+  .cv-background {
+    max-width: 220px;
+    height: auto;
+    position: relative;
+    right: -36px;
+    top: 56px;
+  }
+
+  .logo {
+    max-width: 60px;
+  }
+  .landing-form {
+    /* margin-top: 20px; */
+    margin: 20px 20px 0;
+  }
+  .margin-container {
+    margin-top: 20px;
+  }
+  .landing-form .form-title {
+    font-size: 22px;
+  }
+  .card {
+    max-width: 300px;
+    height: auto;
+  }
+  .client-circle {
+    width: 100px;
+    height: 100px;
+    margin: 22px;
+  }
+  .client-circle img {
+    width: 64px;
   }
 }

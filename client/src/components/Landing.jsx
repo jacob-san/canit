@@ -63,7 +63,7 @@ class Landing extends React.Component {
         </Link>
         <div className="bg">
           <Row>
-            <Col className="" sm={24} md={24} lg={12}>
+            <Col className="col-vector" sm={24} md={24} lg={12}>
               <div className="vector-container">
                 <img className="curve" src={curve} alt="" />
                 <img className="logo" src={logo} alt="" />
@@ -82,7 +82,7 @@ class Landing extends React.Component {
         </div>
         <div className="margin-container">
           <div className="grid-container">
-            <Row>
+            <Row gutter={8}>
               <div className="sub-title">
                 <p>who is itcan?</p>
                 <hr />
@@ -94,8 +94,8 @@ class Landing extends React.Component {
                 region focusing on enabling leading brands to enable their
                 business and technology growth.
               </p>
-              <Col sm={24} md={12} lg={8}>
-                <Card className="card" style={{ width: 300 }}>
+              <Col sm={24} md={8} lg={8}>
+                <Card className="card">
                   <img src={eye} alt="" srcset="" />
                   <div className="card-title">Vision</div>
                   <p className="card-description">
@@ -104,8 +104,8 @@ class Landing extends React.Component {
                   </p>
                 </Card>
               </Col>
-              <Col sm={24} md={12} lg={8}>
-                <Card className="card" style={{ width: 300 }}>
+              <Col sm={24} md={8} lg={8}>
+                <Card className="card">
                   <img src={mission} alt="" srcset="" />
                   <div className="card-title">Mission</div>
                   <p className="card-description">
@@ -114,8 +114,8 @@ class Landing extends React.Component {
                   </p>
                 </Card>
               </Col>
-              <Col sm={24} md={12} lg={8}>
-                <Card className="card" style={{ width: 300 }}>
+              <Col sm={24} md={8} lg={8}>
+                <Card className="card">
                   <img src={value} alt="" srcset="" />
                   <div className="card-title">Value</div>
                   <p className="card-description">
@@ -192,13 +192,13 @@ class Landing extends React.Component {
                 region focusing on enabling leading brands to enable their
                 business and technology growth.
               </p>
-              <Col sm={24} md={12} lg={8}>
+              <Col sm={24} md={8} lg={8}>
                 <img src={dubai} alt="" srcset="" />
               </Col>
-              <Col sm={24} md={12} lg={8}>
+              <Col sm={24} md={8} lg={8}>
                 <img src={damam} alt="" srcset="" />
               </Col>
-              <Col sm={24} md={12} lg={8}>
+              <Col sm={24} md={8} lg={8}>
                 <img src={cairo} alt="" srcset="" />
               </Col>
             </Row>
