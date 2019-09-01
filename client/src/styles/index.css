@@ -21,7 +21,7 @@ body {
 }
 /* Landing */
 
-.pg-container-landing .bg {
+.pg-container-landing {
   max-width: 1450px;
   margin: 0 auto;
 }
