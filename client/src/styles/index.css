@@ -310,14 +310,14 @@ body {
 }
 
 .pwd-hint {
-  font-size: 9px;
+  font-size: 11px;
   color: #e8e8e8;
   cursor: pointer;
 }
 
 .pwd-hint:hover {
   color: gray;
-  scale: 1.4;
+  scale: 1.2;
   transition: all ease 0.5s;
 }
 
