@@ -123,23 +123,14 @@ class RegistrationForm extends Component {
           <Col span={12}>
             <Form.Item>
               {getFieldDecorator('nationality', {
-                initialValue: nationality,
-
-                rules: [
-                  {
-                    required: true,
-                    message: 'Please select your nationality'
-                  }
-                ]
+                initialValue: nationality
               })(<Input placeholder="Nationality" />)}
             </Form.Item>
           </Col>
           <Col span={12}>
             <Form.Item>
               {getFieldDecorator('maritalStatus', {
-                initialValue: maritalStatus,
-
-                rules: [{ required: true, message: 'Please input your status' }]
+                initialValue: maritalStatus
               })(
                 <Select placeholder="Marital Status">
                   <Option value="single">Single</Option>
@@ -153,18 +144,14 @@ class RegistrationForm extends Component {
           <Col span={12}>
             <Form.Item>
               {getFieldDecorator('major', {
-                initialValue: major,
-
-                rules: [{ required: true, message: 'Please input major' }]
+                initialValue: major
               })(<Input placeholder="Major" />)}
             </Form.Item>
           </Col>
           <Col span={12}>
             <Form.Item>
               {getFieldDecorator('degree', {
-                initialValue: degree,
-
-                rules: [{ required: true, message: 'Please input degree' }]
+                initialValue: degree
               })(<Input placeholder="Degree" />)}
             </Form.Item>
           </Col>
@@ -173,9 +160,7 @@ class RegistrationForm extends Component {
           <Col span={12}>
             <Form.Item>
               {getFieldDecorator('university', {
-                initialValue: university,
-
-                rules: [{ required: true, message: 'Please input University' }]
+                initialValue: university
               })(<Input placeholder="University" />)}
             </Form.Item>
           </Col>
@@ -200,20 +185,14 @@ class RegistrationForm extends Component {
           <Col span={12}>
             <Form.Item>
               {getFieldDecorator('employmentStatus', {
-                initialValue: employmentStatus,
-
-                rules: [{ required: true, message: 'Please input emp status' }]
+                initialValue: employmentStatus
               })(<Input placeholder="Employment Status" />)}
             </Form.Item>
           </Col>
           <Col span={12}>
             <Form.Item>
               {getFieldDecorator('expectedSalary', {
-                initialValue: expectedSalary,
-
-                rules: [
-                  { required: true, message: 'Please input Expected Salary' }
-                ]
+                initialValue: expectedSalary
               })(<Input placeholder="Expected Salary" />)}
             </Form.Item>
           </Col>
@@ -231,9 +210,7 @@ class RegistrationForm extends Component {
           <Col span={12}>
             <Form.Item>
               {getFieldDecorator('email', {
-                initialValue: email,
-
-                rules: [{ required: true, message: 'Please input Email' }]
+                initialValue: email
               })(<Input placeholder="Email" />)}
             </Form.Item>
           </Col>
@@ -242,9 +219,7 @@ class RegistrationForm extends Component {
           <Col span={12}>
             <Form.Item>
               {getFieldDecorator('visaStatus', {
-                initialValue: visaStatus,
-
-                rules: [{ required: true, message: 'Please input Visa Status' }]
+                initialValue: visaStatus
               })(
                 <Select placeholder="Visa status">
                   <Option value="tourist">Tourist</Option>
@@ -257,9 +232,7 @@ class RegistrationForm extends Component {
           <Col span={12}>
             <Form.Item>
               {getFieldDecorator('description', {
-                initialValue: description,
-
-                rules: [{ required: true, message: 'Tell us about you' }]
+                initialValue: description
               })(<Input placeholder="Tell us about you(optional)" />)}
             </Form.Item>
           </Col>

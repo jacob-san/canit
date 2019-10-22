@@ -66,7 +66,7 @@ class Landing extends React.Component {
             <Col className="col-vector" sm={24} md={24} lg={12}>
               <div className="vector-container">
                 <img className="curve" src={curve} alt="" />
-                <img className="logo" src={logo} alt="" />
+                {/* <img className="logo" src={logo} alt="" /> */}
                 <img className="cv-background" src={cv} alt="" />
               </div>
             </Col>
@@ -84,23 +84,23 @@ class Landing extends React.Component {
           <div className="grid-container">
             <Row gutter={8}>
               <div className="sub-title">
-                <p>who is itcan?</p>
+                <p>who</p>
                 <hr />
               </div>
               <p className="section-description">
-                Itcan was founded in Dubai in 2015, it started with Performance
-                Marketing & Digital Marketing Services and now it is the leading
-                Saudi e-commerce digital marketing company in the Middle East
-                region focusing on enabling leading brands to enable their
-                business and technology growth.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur.
               </p>
               <Col sm={24} md={8} lg={8}>
                 <Card className="card">
                   <img src={eye} alt="" srcset="" />
                   <div className="card-title">Vision</div>
                   <p className="card-description">
-                    To be the leading e-commerce growth consultancy in the
-                    Middle East
+                    Lorem ipsum dolor sit amet, consectetur, sed do
                   </p>
                 </Card>
               </Col>
@@ -109,8 +109,7 @@ class Landing extends React.Component {
                   <img src={mission} alt="" srcset="" />
                   <div className="card-title">Mission</div>
                   <p className="card-description">
-                    To be the leading e-commerce growth consultancy in the
-                    Middle East
+                    Lorem ipsum dolor sit amet, consectetur, sed do
                   </p>
                 </Card>
               </Col>
@@ -119,8 +118,7 @@ class Landing extends React.Component {
                   <img src={value} alt="" srcset="" />
                   <div className="card-title">Value</div>
                   <p className="card-description">
-                    To be the leading e-commerce growth consultancy in the
-                    Middle East
+                    Lorem ipsum dolor sit amet, consectetur, sed do
                   </p>
                 </Card>
               </Col>
@@ -132,19 +130,19 @@ class Landing extends React.Component {
               <hr />
             </div>
             <p className="section-description">
-              Itcan was founded in Dubai in 2015, it started with Performance
-              Marketing & Digital Marketing Services and now it is the leading
-              Saudi e-commerce digital marketing company in the Middle East
-              region focusing on enabling leading brands to enable their
-              business and technology growth.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
             </p>
             <Col sm={24} md={12} lg={6}>
               <Card className="borderless-card" style={{ width: 300 }}>
                 <img src={layer1} alt="" srcset="" />
                 <div className="card-title">App Installs</div>
                 <p className="card-description">
-                  To be the leading e-commerce growth consultancy in the Middle
-                  East
+                  Lorem ipsum dolor sit amet, consectetur
                 </p>
               </Card>
             </Col>
@@ -153,8 +151,7 @@ class Landing extends React.Component {
                 <img src={layer2} alt="" srcset="" />
                 <div className="card-title">Brand Awareness</div>
                 <p className="card-description">
-                  To be the leading e-commerce growth consultancy in the Middle
-                  East
+                  Lorem ipsum dolor sit amet, consectetur
                 </p>
               </Card>
             </Col>
@@ -163,8 +160,7 @@ class Landing extends React.Component {
                 <img src={layer3} alt="" srcset="" />
                 <div className="card-title">Customer Acquisition</div>
                 <p className="card-description">
-                  To be the leading e-commerce growth consultancy in the Middle
-                  East
+                  Lorem ipsum dolor sit amet, consectetur
                 </p>
               </Card>
             </Col>
@@ -173,8 +169,7 @@ class Landing extends React.Component {
                 <img src={layer4} alt="" srcset="" />
                 <div className="card-title">Revenue Generation</div>
                 <p className="card-description">
-                  To be the leading e-commerce growth consultancy in the Middle
-                  East
+                  Lorem ipsum dolor sit amet, consectetur
                 </p>
               </Card>
             </Col>
@@ -186,11 +181,12 @@ class Landing extends React.Component {
                 <hr />
               </div>
               <p className="section-description">
-                Itcan was founded in Dubai in 2015, it started with Performance
-                Marketing & Digital Marketing Services and now it is the leading
-                Saudi e-commerce digital marketing company in the Middle East
-                region focusing on enabling leading brands to enable their
-                business and technology growth.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur.
               </p>
               <Col sm={24} md={8} lg={8}>
                 <img src={dubai} alt="" srcset="" />
@@ -210,34 +206,34 @@ class Landing extends React.Component {
             </div>
             <section className="our-clients">
               <div className="client-circle">
-                <img src={boohoo} alt="" srcset="" />
-              </div>
-              <div className="client-circle">
-                <img src={oud} alt="" srcset="" />
-              </div>
-              <div className="client-circle">
-                <img src={ghawali} alt="" srcset="" />
+                <img src={loccitane} alt="" srcset="" />
               </div>
               <div className="client-circle">
                 <img src={loccitane} alt="" srcset="" />
               </div>
               <div className="client-circle">
-                <img src={matic} alt="" srcset="" />
+                <img src={loccitane} alt="" srcset="" />
               </div>
               <div className="client-circle">
-                <img src={mikyajy} alt="" srcset="" />
+                <img src={loccitane} alt="" srcset="" />
               </div>
               <div className="client-circle">
-                <img src={mumzworld} alt="" srcset="" />
+                <img src={loccitane} alt="" srcset="" />
               </div>
               <div className="client-circle">
-                <img src={nisnass} alt="" srcset="" />
+                <img src={loccitane} alt="" srcset="" />
               </div>
               <div className="client-circle">
-                <img src={ounass} alt="" srcset="" />
+                <img src={loccitane} alt="" srcset="" />
               </div>
               <div className="client-circle">
-                <img src={tajawal} alt="" srcset="" />
+                <img src={loccitane} alt="" srcset="" />
+              </div>
+              <div className="client-circle">
+                <img src={loccitane} alt="" srcset="" />
+              </div>
+              <div className="client-circle">
+                <img src={loccitane} alt="" srcset="" />
               </div>
             </section>
           </Row>
@@ -247,14 +243,14 @@ class Landing extends React.Component {
             <Col sm={24} md={12} lg={8} />
           </Row>
           <footer className="footer">
-            <img className="footer-logo" src={logoColor} alt="" srcset="" />
+            {/* <img className="footer-logo" src={logoColor} alt="" srcset="" /> */}
             <div className="social-icons">
               <img src={fb} alt="" srcset="" />
               <img src={twitter} alt="" srcset="" />
               <img src={linkedin} alt="" srcset="" />
               <img src={instagram} alt="" srcset="" />
             </div>
-            <div className="copyright-text">© From ITCAN with ❤️</div>
+            <div className="copyright-text">© Copyright 2019</div>
           </footer>
         </div>
       </div>
