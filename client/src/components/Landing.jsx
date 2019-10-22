@@ -84,7 +84,7 @@ class Landing extends React.Component {
           <div className="grid-container">
             <Row gutter={8}>
               <div className="sub-title">
-                <p>who</p>
+                <p>who we are</p>
                 <hr />
               </div>
               <p className="section-description">
